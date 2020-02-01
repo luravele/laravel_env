@@ -7,7 +7,7 @@ or other (root) user
 copy luarevele app sources to you home directiory
 
 ```bash
-git clone https://github.com/luravele/laravel_env.git /usr/lib/luravele
+sudo git clone https://github.com/luravele/laravel_env.git /usr/lib/luravele
 ```
 
 Crete simbolic lin for speed run luravele
@@ -18,7 +18,7 @@ sudo ln -s /usr/lib/luravele/menu.sh /usr/local/bin/luravele
 
 and final
 
-for strt luravele settngs ue command
+for start luravele settngs ue command
 
 ```bash
 luravele
