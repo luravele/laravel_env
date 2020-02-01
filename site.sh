@@ -7,7 +7,7 @@ echo ""
 
 sudo chown $USER:$USER /etc/nginx/sites-available
 sudo chown $USER:$USER /etc/nginx/sites-enabled
-sed 's/#SITE_NAME#/'$item'/;s/#PHP_VERSION#/'$item2'/' ./nginx/site_mask.conf | sudo cat > /etc/nginx/sites-available/$item
+sed 's/#SITE_NAME#/'$item'/;s/#PHP_VERSION#/'$item2'/' ./nginx/site_mask.conf | sudo cat > /etc/nginx/sites-available/${item}
 sudo ln -s /etc/nginx/sites-available/$item /etc/nginx/sites-enabled/$item
 sudo chown root:root /etc/nginx/sites-available
 sudo chown root:root /etc/nginx/sites-enabled
