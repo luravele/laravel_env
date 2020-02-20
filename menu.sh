@@ -5,7 +5,12 @@ NORMAL='\033[0m'	#  ${NORMAL}	# все атрибуты по умолчанию
 CYAN='\033[0;36m'       #  ${CYAN}      # цвет морской волны знаков
 RED='\033[0;31m'       #  ${RED}      # красный цвет знаков
 OP=4
-export APP=~/luravele/
+export APP=/usr/lib/luravele/
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "${RED}Please run as root ('sudo -i' for Ubuntu)${NORMAL}"
+  exit
+fi
 
 reset
     sudo chmod +x ${APP}php.sh
@@ -18,7 +23,7 @@ reset
 if [ ! -f /usr/local/bin/luravele ]
 then
     sudo chown $USER:$USER /usr/local/bin
-    ln -s ~/luravele/menu.sh /usr/local/bin/luravele
+    ln -s /usr/lib/luravele/menu.sh /usr/local/bin/luravele
     sudo chown root:root /usr/local/bin
 fi
 
