@@ -1,16 +1,16 @@
-# Instal laravel environment to Ubuntu18 server
+# Install minimal Laravel environment to Ubuntu18 server
 
 If we running scripts from root
 
 or other (root) user
 
-copy luarevele app sources to you home directiory
+copy lurevele app sources to you home directory
 
 ```bash
 git clone https://github.com/luravele/laravel_env.git ~/luravele
 ```
 
-Crete simbolic lin for speed run luravele
+Crete simbolic link for speed run luravele
 
 ```bash
 sudo ln -s ~/luravele/menu.sh /usr/local/bin/luravele
@@ -18,7 +18,7 @@ sudo ln -s ~/luravele/menu.sh /usr/local/bin/luravele
 
 and final
 
-for strt luravele settngs ue command
+for start luravele settings use command
 
 ```bash
 luravele
@@ -29,3 +29,10 @@ luravele
 select options
 
 option 1 (Install ENV use first for installation minimal product for Server)
+
+## SSL certificate
+
+```bash
+sudo certbot --nginx -d example.com -d www.example.com
+```
+
